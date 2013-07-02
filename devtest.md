@@ -96,11 +96,11 @@ __(Note: all of the following commands should be run on your host machine, not i
    all-in-one OpenStack cloud with the baremetal driver enabled, and
    preconfigures it for a development environment.
 
-        cd $TRIPLEO_ROOT/tripleo-image-elements/elements/boot-stack
+        cd $TRIPLEO_ROOT/tripleo-image-elements/elements/seed-stack-config
         sed -i "s/\"user\": \"stack\",/\"user\": \"`whoami`\",/" config.json
 
         cd $TRIPLEO_ROOT/incubator/
-        boot-elements boot-stack -o seed
+        boot-elements boot-stack seed-stack-config -o seed
 
    Your SSH pub key has been copied to the resulting 'seed' VMs root
    user.  It has been started by the boot-elements script, and can be logged
